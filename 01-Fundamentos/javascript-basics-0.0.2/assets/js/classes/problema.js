@@ -14,7 +14,7 @@ const fher2 = {
 }
 
 // fher.imprimir()
-
+// este era el antigua estandar de la forma en la que se crea un clase orientada a objetos
 function Persona(nombre, edad) {
     console.log('esta linea')
 
@@ -27,5 +27,5 @@ function Persona(nombre, edad) {
 }
 
 const maria = new Persona('Maria', 18)
-console.log(maria)
+// console.log(maria)
 maria.imprimir();
