@@ -9,7 +9,23 @@ export const promiseComponent = ( element ) => {
     
 }
 
-
+/**
+ * 
+ * @param {String} id 
+ * @returns {Promise}
+ */
 const findHero = ( id ) => {
-    const hero = heroes
+    
+    const promise = new Promise( ( resolve, reject ) => {
+        
+        const hero = heroes.find( hero => hero.id === id )
+
+        if( hero ) {
+            resolve( hero );
+            return;
+        }
+        reject(`Hero with id ${ id } not found`);
+    });
+
+    return promise;
 }
