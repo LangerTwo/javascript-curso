@@ -9,5 +9,15 @@
   <body>
     <div id="app"></div>
     <script type="module" src="/src/main.js"></script>
+
+    <input 
+      type="text" 
+      id="dateInput" 
+      placeholder="Seleccione una fecha" 
+      onfocus="(this.type='date')" 
+      onblur="if(!this.value) this.type='text';"
+    />
+  </br>
+    <input type="date" value="2017-06-01">
   </body>
 </html>

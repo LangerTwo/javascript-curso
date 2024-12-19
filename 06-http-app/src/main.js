@@ -1,7 +1,9 @@
 import './style.css'
 import javascriptLogo from './javascript.svg'
 import viteLogo from '/vite.svg'
-import { DragonballApp } from './dragonball/dragonball-app';
+// import { DragonballApp } from './dragonball/dragonball-app';
+import { loadUsersByPage } from './users/use-cases/load-users-by-page';
+import { UsersApp } from './users/user-app';
 
 document.querySelector('#app').innerHTML = `
   <div>
@@ -21,3 +23,5 @@ document.querySelector('#app').innerHTML = `
 const element = document.querySelector('.card')
 
 // DragonballApp( element )
+loadUsersByPage(element)
+UsersApp(element)
