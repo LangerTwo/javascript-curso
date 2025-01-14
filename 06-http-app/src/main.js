@@ -23,5 +23,5 @@ document.querySelector('#app').innerHTML = `
 const element = document.querySelector('.card')
 
 // DragonballApp( element )
-loadUsersByPage(element)
+// loadUsersByPage(element)
 UsersApp(element)
