@@ -1,5 +1,6 @@
 import { renderAddButtons } from "./presentation/render-add-buttons/render-add-buttons";
 import { renderButtons } from "./presentation/render-buttons/render-buttons";
+import { renderModal } from "./presentation/render-modal/render-modal";
 import { renderTable } from "./presentation/render-table/render-table";
 import usersStore from "./store/users-store";
 
@@ -17,5 +18,7 @@ export const UsersApp = async( element ) => {
     renderTable( element );
     renderButtons( element );
     renderAddButtons( element );
+    renderModal( element );
+
     // console.log( usersStore.getUser() );
 }
