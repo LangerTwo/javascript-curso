@@ -26,4 +26,10 @@ export const renderButtons = ( element ) => {
         currentPageLabel.innerHTML = usersStore.getCurrentPage();
         renderTable( element );
     });
+
+    prevButton.addEventListener('click', async () => {
+        await usersStore.loadPreviusPage();
+        currentPageLabel.innerHTML = usersStore.getCurrentPage();
+        renderTable( element );
+    });
 }
