@@ -1,3 +1,4 @@
+import { userModelToLocalhost } from '../mappers/user-to-localhost.mapper';
 import {User} from '../models/users'
 
 /**
@@ -7,14 +8,18 @@ export const saverUser = async ( userLike ) => {
 
     const user = new User(userLike);
 
-    // TODO: aqui falta un mapper
+    if ( !user.firstName || !user.lastName ) {
+        throw 'El nombre y apellido son obligatorios';
+    }
+
+    const userToSave = userModelToLocalhost(user);
 
     if(user.id) {
         throw 'No implementado la actualización de usuarios';
         return;
     }
 
-    const updatedUser = await createUser(user);
+    const updatedUser = await createUser( userToSave );
     return updatedUser;
 }
 
